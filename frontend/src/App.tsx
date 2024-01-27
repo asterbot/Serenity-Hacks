@@ -19,7 +19,8 @@ export default function App() {
     })
 
     if (response.ok){
-      console.log("Nice")
+      console.log(response.json()
+                  .then(data => console.log(data.summary)))
     }
 
     
