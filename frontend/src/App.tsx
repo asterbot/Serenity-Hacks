@@ -1,13 +1,29 @@
-import * as React from 'react';
 import { AudioRecorder } from 'react-audio-voice-recorder';
 
 export default function App() {
-  const addAudioElement = (blob: Blob) => {
+  const addAudioElement = async (blob: Blob) => {
+    console.log(typeof(blob))
+    console.log(Object.keys(blob))
+
     const url = URL.createObjectURL(blob);
-    const audio = document.createElement('audio');
+    console.log("Type:", typeof(url))
+    console.log(url)
+
+    const audio = document.createElement("audio");
     audio.src = url;
     audio.controls = true;
-    // document.body.appendChild(audio);
+
+    const response = await fetch('/api', {
+      method: 'POST',
+      body: url,
+    })
+
+    if (response.ok){
+      console.log(response.json()
+                  .then(data => console.log(data.summary)))
+    }
+
+    
   };
 
   return (
@@ -25,11 +41,12 @@ export default function App() {
           // sampleSize,
         }}
         onNotAllowedOrFound={(err) => console.table(err)}
-        downloadOnSavePress={true}
-        downloadFileExtension="webm"
+        // downloadOnSavePress={true}
+        downloadFileExtension="wav"
         mediaRecorderOptions={{
           audioBitsPerSecond: 128000,
         }}
+        showVisualizer={true}
         // showVisualizer={true}
       />
       <br />
