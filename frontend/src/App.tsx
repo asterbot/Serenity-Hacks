@@ -2,20 +2,19 @@ import { AudioRecorder } from 'react-audio-voice-recorder';
 
 export default function App() {
   const addAudioElement = async (blob: Blob) => {
-    console.log(typeof(blob))
-    console.log(Object.keys(blob))
-
+    
     const url = URL.createObjectURL(blob);
-    console.log("Type:", typeof(url))
-    console.log(url)
-
+    
     const audio = document.createElement("audio");
     audio.src = url;
     audio.controls = true;
 
+    const sendData = new FormData()
+    sendData.append('audio', blob, 'audio.wav')
+
     const response = await fetch('/api', {
       method: 'POST',
-      body: url,
+      body: sendData,
     })
 
     if (response.ok){
