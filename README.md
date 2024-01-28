@@ -3,7 +3,7 @@
 
   # <i>mEmotion</i> for SerenityHacks
 
-  <i>Talk therapy anytime</i>
+  <i>Talk Therapy Anytime</i>
 
 </div>
 
@@ -40,7 +40,6 @@ The frontend uses React. The user audio is sent to the backend as a .wav file th
 - React Vite (with Typescript)
 - Material UI
 - AudioRecorder
-- 
 
 #### Backend Frameworks and Libraries
 - Flask
