@@ -13,12 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.recorder {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-}
 a {
   font-weight: 500;
   color: #646cff;
@@ -71,4 +65,25 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* For Heading Component */
+.heading {
+  position: absolute; /* Use 'absolute' to position relative to the nearest positioned ancestor */
+  top: 20px; /* Adjust this value to your preference */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+/* For Audio Recorder Component */
+.recorder {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -230%);
+}
+
+/* For table component */
+.theTable{
+  left:50%;
 }
