@@ -42,7 +42,7 @@ print ("Analyzed by: %s" % Vokaturi.versionAndLicense())
 
 print("Reading sound file...")
 print(sys.argv)
-file_name = ("""OpenVokaturi-4-0/examples/hello.wav""") # sys.argv[1]
+file_name = ("""OpenVokaturi-4-0/examples/Voice_001.wav""") # sys.argv[1]
 (sample_rate, samples) = scipy.io.wavfile.read(file_name)
 print("   sample rate %.3f Hz" % sample_rate)
 

@@ -17,7 +17,7 @@
 import sys
 import scipy.io.wavfile
 
-sys.path.append("api")
+sys.path.append("OpenVokaturi-4-0/api")
 import Vokaturi
 
 print ("Loading library...")
