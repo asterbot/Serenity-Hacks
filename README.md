@@ -24,3 +24,5 @@ What's next for mEmotion
 If extending to a published app, we would want to increase our analytical capabilities: currently the emotional analysis is limited by the trained model. The accuracy is okay, and it has the basic emotions, but finding a higher-quality (possibly commercialised) model would increase the usefulness of the app. 
 
 pip3 install SpeechRecognition pydub
+
+pip install Moviepy
