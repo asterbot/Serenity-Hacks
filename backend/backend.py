@@ -8,7 +8,9 @@ import shutil
 main = Flask(__name__)
 CORS(main)
 
-shutil.rmtree('audios')
+if (os.path.exists('audios')):
+    # Delete audios directory if it exists
+    shutil.rmtree('audios')
 os.mkdir('audios')
 os.chdir('audios')   
 
