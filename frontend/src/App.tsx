@@ -14,7 +14,6 @@ export default function App() {
     <div className="App">
       <Heading />
       <AudioRecord />
-      <Table headers={headers} data={data} />
     </div>
   );
 }
