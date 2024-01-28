@@ -13,7 +13,7 @@ export default function Heading(){
             />
             <h1 style={{ fontFamily: 'Moirai One, sans-serif'}}>mEmotion</h1>
             <em style={{ fontFamily: 'sans-serif', fontStyle: 'italic' }}>
-                <center>Talk therapy anytime!</center>
+                <center>Talk Therapy Anytime!</center>
             </em>
         </div>
     )
