@@ -33,7 +33,9 @@ def index():
         # Using this audio file somehow (saved as audio.wav in current directory)
         # Do we need to save it? Not sure. I've done it anyway for now
         # ... (audio processing goes here)
-        emotion_analysis.emotion_analyzer("""OpenVokaturi-4-0/examples/Voice_001.wav""")
+        os.chdir("..")
+        emotion_analysis.emotion_analyzer("Voice_001.wav")
+        os.chdir("audios")
         
         # For summarizing the text, commenting this for now
         # Ideally this should be working on the text received from the audio processing  

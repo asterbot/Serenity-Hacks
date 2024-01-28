@@ -16,18 +16,19 @@
 #    Sad: 0.238
 #    Angry: 0.001
 #    Fear: 0.000
+import sys
+import scipy.io.wavfile
+import os
 
+sys.path.append("OpenVokaturi-4-0/api")
+import Vokaturi
+import platform
+import struct
 
-def emotion_analyzer(file_name):
-    import sys
-    import scipy.io.wavfile
+sys.path.pop()
 
-    sys.path.append("OpenVokaturi-4-0/api")
-    import Vokaturi
-
-    print ("Loading library...")
-    import platform
-    import struct
+def emotion_analyzer(file_path):
+    print("Loading library...")
     if platform.system() == "Darwin":
         assert struct.calcsize ("P") == 8
         Vokaturi.load("OpenVokaturi-4-0/lib/open/macos/OpenVokaturi-4-0-mac.dylib")
@@ -45,7 +46,7 @@ def emotion_analyzer(file_name):
     print("Reading sound file...")
     print(sys.argv)
     # file_name = ("""OpenVokaturi-4-0/examples/Voice_001.wav""") # sys.argv[1]
-    (sample_rate, samples) = scipy.io.wavfile.read(file_name)
+    (sample_rate, samples) = scipy.io.wavfile.read(file_path)
     print("   sample rate %.3f Hz" % sample_rate)
 
     print("Allocating Vokaturi sample array...")
@@ -88,4 +89,4 @@ def emotion_analyzer(file_name):
     return (neutral, happy, sad, angry, fear)
 
 
-print(emotion_analyzer("""OpenVokaturi-4-0/examples/Voice_001.wav"""))
+# print(emotion_analyzer("""OpenVokaturi-4-0/examples/Voice_001.wav"""))
