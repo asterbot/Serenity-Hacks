@@ -3,22 +3,29 @@ from flask_cors import CORS
 import requests
 # import summarize
 import os
+import shutil
 
 main = Flask(__name__)
 CORS(main)
 
+shutil.rmtree('audios')
+os.mkdir('audios')
+os.chdir('audios')   
+
 TEXT_SUMMARY = ''
 
 @main.route('/', methods=['POST','GET'])
-def index():        
+def index():       
     if request.method=="POST":
         if 'audio' not in request.files:
             return jsonify({'error':'No audio file provided'})
         
         audio_file = request.files['audio']
-        file_path = os.path.join(os.getcwd(), 'audio.wav')
+        
+        file_path = os.path.join(os.getcwd(), audio_file.filename)
         audio_file.save(file_path)
         
+        # TODO
         # Using this audio file somehow (saved as audio.wav in current directory)
         # Do we need to save it? Not sure. I've done it anyway for now
         # ... (audio processing goes here)
