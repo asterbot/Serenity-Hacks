@@ -99,10 +99,12 @@ button:focus-visible {
   place-content: center;
   margin: auto;
   padding: auto;
-  transform: translate(0, 40%);
-
+  transform: translate(0, 80%);
 }
 
-.audios{
-  
+.graphsContainer{
+  display: flex;
+  place-content: center;
+  /* padding: 0 10%; */
+  transform: translate(0, 80%);
 }
