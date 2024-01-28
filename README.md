@@ -3,7 +3,7 @@
 
   # <i>mEmotion</i> for SerenityHacks
 
-  <i>Talk therapy anytime</i>
+  <i>Talk Therapy Anytime</i>
 
 </div>
 
