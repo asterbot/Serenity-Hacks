@@ -8,6 +8,7 @@ interface TableProps {
 }
 
 const Table: React.FC<TableProps> = ({ headers, data }) => {
+    // TODO: Make table centered
   return (
     <div className="theTable">
       <div style={tableContainerStyle}>
