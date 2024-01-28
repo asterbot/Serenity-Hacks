@@ -11,6 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -24,10 +28,15 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  min-width: 320px; 
   min-height: 100vh;
+  justify-content: center;
+  
 }
 
 h1 {
@@ -85,5 +94,11 @@ button:focus-visible {
 
 /* For table component */
 .theTable{
-  left:50%;
+  display: flex;
+  justify-content: center;
+  place-content: center;
+  margin: auto;
+  padding: auto;
+  transform: translate(0, 40%);
+
 }

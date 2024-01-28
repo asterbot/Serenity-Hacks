@@ -41,7 +41,7 @@ const Table: React.FC<TableProps> = ({ headers, data }) => {
 
 
 const tableContainerStyle: React.CSSProperties = {
-  width: '60%', // Optional: Adjust the width as needed
+  // height: '80%', // Optional: Adjust the width as needed
 };
 
 const headerStyle: React.CSSProperties = {
