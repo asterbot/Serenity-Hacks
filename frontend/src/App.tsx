@@ -1,6 +1,11 @@
 import { AudioRecorder } from 'react-audio-voice-recorder';
+import { useState } from "react"
+
+// State hook for managing the number of audio files sent (and that name will be used to store it)
+
 
 export default function App() {
+  const [numAudioFiles, setNumAudioFiles] = useState(0);
   const addAudioElement = async (blob: Blob) => {
     
     const url = URL.createObjectURL(blob);
@@ -10,7 +15,10 @@ export default function App() {
     audio.controls = true;
 
     const sendData = new FormData()
-    sendData.append('audio', blob, 'audio.wav')
+
+    const s: string = numAudioFiles.toString();
+    sendData.append('audio', blob, 'audio'+s+'.wav');
+    setNumAudioFiles(numAudioFiles+1); //Increment number of audio files
 
     const response = await fetch('/api', {
       method: 'POST',
