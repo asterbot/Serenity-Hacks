@@ -15,7 +15,7 @@ export default function App() {
     <div className="App">
       <Heading />
       <AudioRecord />
-      {/* <Graph headers={headers} data={data} /> */}
+      <Graph headers={headers} data={data} />
     </div>
   );
 }

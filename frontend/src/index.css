@@ -98,7 +98,7 @@ button:focus-visible {
   justify-content: center;
   place-content: center;
   margin: auto;
-  padding: auto;
+  padding: 5%;
   transform: translate(0, 40%);
 
 }
