@@ -1,6 +1,7 @@
 import AudioRecord from './components/audiorecord';
 import Heading from './components/heading';
 import Table from './components/table'
+import Graph from './components/graph'
 
 export default function App() {
   const headers = ['Name', 'Age', 'Country'];
@@ -15,6 +16,7 @@ export default function App() {
       <Heading />
       <AudioRecord />
       <Table headers={headers} data={data} />
+      <Graph headers={headers} data={data} />
     </div>
   );
 }
